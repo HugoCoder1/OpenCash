@@ -18,7 +18,7 @@ export default function HomePage() {
             to="/dashboard"
             className="text-sm font-medium px-5 py-2.5 rounded-full bg-primary-foreground text-primary hover:opacity-90 transition-opacity"
           >
-            Se connecter
+            Dashboard
           </Link>
         </header>
 
