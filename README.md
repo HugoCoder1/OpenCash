@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# OpenCash – Mini Application Fintech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tâche Front-End – TEST (ASITECH SOLUTION)
 
-Currently, two official plugins are available:
+## Contexte
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ce projet consiste à développer une mini application Fintech nommée OpenCash, permettant d’afficher le solde d’un utilisateur, ses transactions récentes ainsi qu’une interface moderne présentant les fonctionnalités de la plateforme.
 
-## React Compiler
+- Durée estimée : 2 à 3 jours
+- Responsable : Équipe Stagiaire Front-End
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Objectif du projet
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Créer une application Front-End simple, moderne et bien structurée afin de démontrer les compétences en React.js, en gestion d’état et en intégration UI.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Compétences visées
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React.js (composants, hooks, props, state)
+- TailwindCSS
+- Utilisation de Mock Data
+- Gestion d’état avec `useState` et `useEffect`
+- Organisation d’un projet React propre et modulaire
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Fonctionnalités à réaliser
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1️ Page d’accueil (`/`)
+
+- Affichage du nom de la plateforme : OpenCash
+- Brève description du service Fintech
+- Bouton « Accéder au dashboard » redirigeant vers le dashboard
+
+---
+
+### 2️⃣ Page Dashboard (`/dashboard`)
+
+Afficher :
+
+- Solde actuel de l’utilisateur
+  Exemple : `120 500 F CFA`
+- Liste des transactions récentes :
+
+  - Nom de la transaction
+  - Date
+  - Montant
+  - Statut (succès, échec, en attente)
+
+- Graphique ou diagramme (facultatif) pour visualiser les entrées et sorties
+
+#### Menu latéral (Sidebar)
+
+- Accueil
+- Transactions
+- Profil
+- Déconnexion
+
+---
+
+### 3️⃣ Page Profil (`/profile`)
+
+Afficher :
+
+- Nom de l’utilisateur
+- Adresse email
+- Photo de profil
+- Bouton « Modifier le profil » (non fonctionnel pour le moment)
+
+---
+
+## Technologies utilisées
+
+- React.js
+- TailwindCSS
+- Mock Data
+
+## ▶ Lancer le projet
+
+```bash
+npm install
+npm run dev
 ```
